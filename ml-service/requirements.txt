@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+pandas
+numpy
+scikit-learn
+networkx
+qiskit==2.5.2
+qiskit-aer==0.17.2
+qiskit-optimization==0.7.0
+qiskit-algorithms==0.4.0
+joblib==1.5.2

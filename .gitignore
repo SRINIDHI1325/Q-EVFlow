@@ -1,0 +1,16 @@
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+dist/
+build/
+.vite/
+.pytest_cache/
+coverage/
+ml-service/data/*.csv
+!ml-service/data/dataset.csv
+*.log
+.DS_Store

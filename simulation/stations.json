@@ -1,0 +1,8 @@
+{
+  "stations": [
+    {"id": "S-NORTH", "name": "North Loop", "node_id": "station-north", "capacity": 3, "available_power_kw": 120, "default_power_kw": 11, "queue_length": 1, "predicted_demand": 68, "demand_tier": "High Demand"},
+    {"id": "S-EAST", "name": "East Junction", "node_id": "station-east", "capacity": 4, "available_power_kw": 160, "default_power_kw": 22, "queue_length": 2, "predicted_demand": 46, "demand_tier": "Moderate Demand"},
+    {"id": "S-WEST", "name": "West Commons", "node_id": "station-west", "capacity": 5, "available_power_kw": 180, "default_power_kw": 11, "queue_length": 0, "predicted_demand": 22, "demand_tier": "Low Demand"}
+  ],
+  "provenance": "configurable local simulation input, not a real-world measurement"
+}

@@ -1,0 +1,19 @@
+{
+  "traffic_multipliers": {
+    "low": 1.0,
+    "moderate": 1.25,
+    "high": 1.6
+  },
+  "default_time_slot_minutes": 30,
+  "max_quantum_variables": 18,
+  "time_slots": [
+    {"id": "slot-0600", "label": "06:00-06:30"},
+    {"id": "slot-0630", "label": "06:30-07:00"},
+    {"id": "slot-0700", "label": "07:00-07:30"}
+  ],
+  "dataset_status": "not supplied",
+  "simulated_evs": [
+    {"id": "EV-001", "current_node": "origin-a", "battery_capacity_kwh": 60, "soc": 35, "required_energy_kwh": 32, "priority": "normal"},
+    {"id": "EV-002", "current_node": "origin-b", "battery_capacity_kwh": 75, "soc": 22, "required_energy_kwh": 48, "priority": "high"}
+  ]
+}

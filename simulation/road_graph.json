@@ -1,0 +1,20 @@
+{
+  "description": "Small deterministic local road graph. Replace or extend only with documented simulated inputs.",
+  "nodes": [
+    {"id": "origin-a", "label": "Origin A"},
+    {"id": "origin-b", "label": "Origin B"},
+    {"id": "hub", "label": "Central Hub"},
+    {"id": "station-north", "label": "North Station"},
+    {"id": "station-east", "label": "East Station"},
+    {"id": "station-west", "label": "West Station"}
+  ],
+  "edges": [
+    {"from": "origin-a", "to": "hub", "distance_km": 3.4, "base_travel_minutes": 6},
+    {"from": "origin-b", "to": "hub", "distance_km": 2.7, "base_travel_minutes": 5},
+    {"from": "hub", "to": "station-north", "distance_km": 2.1, "base_travel_minutes": 4},
+    {"from": "hub", "to": "station-east", "distance_km": 2.8, "base_travel_minutes": 5},
+    {"from": "hub", "to": "station-west", "distance_km": 1.9, "base_travel_minutes": 4},
+    {"from": "station-north", "to": "station-east", "distance_km": 3.0, "base_travel_minutes": 6},
+    {"from": "station-west", "to": "station-east", "distance_km": 2.4, "base_travel_minutes": 5}
+  ]
+}

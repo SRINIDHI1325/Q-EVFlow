@@ -1,0 +1,37 @@
+{
+  "source_file": "ml-service/data/dataset.csv",
+  "notes": [
+    "Aliases are candidates only and must be resolved against the actual CSV header.",
+    "Missing measurements must be derived only when mathematically justified or marked simulated/configurable."
+  ],
+  "aliases": {
+    "station_id": ["station_id", "station", "charging_station_id", "Charging Station ID"],
+    "timestamp": ["timestamp", "datetime", "date_time", "Charging Start Time"],
+    "arrival_time": ["arrival_time", "arrival_timestamp"],
+    "charging_start_time": ["charging_start_time", "start_time", "Charging Start Time"],
+    "charging_end_time": ["charging_end_time", "end_time", "Charging End Time"],
+    "waiting_time": ["waiting_time", "wait_time"],
+    "battery_capacity_kWh": ["battery_capacity_kWh", "battery_capacity", "battery_kwh", "Battery Capacity (kWh)"],
+    "initial_soc": ["initial_soc", "soc", "state_of_charge", "State of Charge (Start %)"],
+    "final_soc": ["final_soc", "end_soc", "State of Charge (End %)"],
+    "energy_consumed_kWh": ["energy_consumed_kWh", "energy_consumed", "energy_kwh", "Energy Consumed (kWh)"],
+    "charging_power_kW": ["charging_power_kW", "charging_power", "power_kw", "Charging Rate (kW)"],
+    "charging_duration": ["charging_duration", "duration", "charging_time", "Charging Duration (hours)"],
+    "queue_length": ["queue_length", "queue"],
+    "station_load": ["station_load", "load"],
+    "traffic_density": ["traffic_density", "traffic"],
+    "weather_condition": ["weather_condition", "weather", "Temperature (°C)"],
+    "charging_demand": ["charging_demand", "demand"],
+    "charging_priority": ["charging_priority", "priority"],
+    "station_location": ["station_location", "Charging Station Location"],
+    "vehicle_model": ["vehicle_model", "Vehicle Model"],
+    "vehicle_age": ["vehicle_age", "Vehicle Age (years)"],
+    "distance_driven": ["distance_driven", "Distance Driven (since last charge) (km)"],
+    "time_of_day": ["time_of_day", "Time of Day"],
+    "day_of_week": ["day_of_week", "Day of Week"],
+    "charger_type": ["charger_type", "Charger Type"],
+    "user_type": ["user_type", "User Type"]
+  },
+  "required_for_initial_pipeline": ["station_id"],
+  "optional_features": ["timestamp", "charging_demand", "energy_consumed_kWh", "queue_length", "traffic_density", "weather_condition", "initial_soc"]
+}
