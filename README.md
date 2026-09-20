@@ -87,6 +87,16 @@ Optimization uses the configured time slots in `simulation/simulation_config.jso
 
 The Express gateway exposes `GET /api/health`, `/api/stations`, `/api/evs`, `POST /api/eta`, `POST /api/ml/predict-demand`, `GET /api/ml/metrics`, `POST /api/ml/cluster-stations`, `POST /api/optimization/solve`, `POST /api/recommendation`, `GET /api/analytics`, and `POST /api/simulation/run`. The Python service provides the same paths without the `/api` prefix on port 8000.
 
+## Render deployment
+
+Deploy Q-EVFlow as three Render services:
+
+1. **Frontend Static Site**: root directory `frontend`, build command `npm install && npm run build`, publish directory `dist`, and `VITE_API_URL=https://YOUR-EXPRESS-SERVICE.onrender.com/api`.
+2. **Express Web Service**: root directory `backend`, build command `npm install`, start command `npm start`, and `ML_SERVICE_URL=https://YOUR-FASTAPI-SERVICE.onrender.com`.
+3. **FastAPI Web Service**: root directory `ml-service`, build command `pip install -r requirements.txt`, start command `uvicorn app.main:app --host 0.0.0.0 --port $PORT`.
+
+Open the **frontend Static Site URL** in the browser. The Express URL is an API service; its root now returns a JSON status response, while application routes are under `/api`. Set `OCM_API_KEY` only on the Express service if using an Open Charge Map key. Do not set it as a frontend variable.
+
 ## Research boundary
 
 Q-EVFlow combines Random Forest demand prediction, K-Means station grouping, Dijkstra route calculation, QUBO modeling, QAOA on a local simulator, and a classical fallback. It is not a reproduction of any particular paper and will not claim quantum speedup or performance improvement without executed experiments.

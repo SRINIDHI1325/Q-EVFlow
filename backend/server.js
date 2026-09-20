@@ -13,6 +13,14 @@ const mlServiceUrl = process.env.ML_SERVICE_URL || 'http://127.0.0.1:8000';
 app.use(express.json());
 app.use(cors());
 
+app.get('/', (_request, response) => {
+  response.json({
+    name: 'Q-EVFlow API',
+    status: 'ok',
+    message: 'Use /api/health for the gateway health check.',
+  });
+});
+
 async function forward(path, options = {}) {
   const timeout = path === '/optimization/solve' || path === '/simulation/run' ? 120000 : 15000;
   const response = await axios({ baseURL: mlServiceUrl, url: path, timeout, ...options });
